@@ -15,19 +15,19 @@ Learn Basic Angular Concepts by creating a searchable, filterable list of friend
 
 #### 
 
-Setup your app an test it by displaying something from your controller's scope using double mustache brackets `{{ }}`
+<!-- Setup your app an test it by displaying something from your controller's scope using double mustache brackets `{{ }}` -->
 
 
 #### 
 
-The angular script has already been included in the project.
-In step one you will create an app variable and your FriendController. We have already provided the appropriate files and outlined a structure for you.
-* Create an app for your angular app in app.js (this should be one line). You can name your app whatever your want
-* Create a FriendController in the FriendController.js file
-* Add the ng-app and ng-controller attributes to index.html in order to attach your controller to your html
-* Test your controller by adding a scope variable called 'test' with the value 'Hello World' and then bind the variable in index.html {{test}} to see if your controller is working
+<!-- The angular script has already been included in the project. -->
+<!-- In step one you will create an app variable and your FriendController. We have already provided the appropriate files and outlined a structure for you. -->
+<!-- * Create an app for your angular app in app.js (this should be one line). You can name your app whatever your want -->
+<!-- * Create a FriendController in the FriendController.js file -->
+<!-- * Add the ng-app and ng-controller attributes to index.html in order to attach your controller to your html -->
+<!-- * Test your controller by adding a scope variable called 'test' with the value 'Hello World' and then bind the variable in index.html {{test}} to see if your controller is working -->
 
-#### 
+<!-- #### 
 __app.js__
 ```
 angular.module('app', []);
@@ -53,18 +53,18 @@ __index.html__
 <body ng-controller="FriendController">
     {{test}}
 ```
-
+ -->
 
 ### Load the friend Information
 
 #### 
 
 In step two we will paste the fake data into our application
-* In the FriendController copy the data from friend-data.json into a scope variable called 'friends' in your FriendController
-* Add a {{friends}} to the html page and refresh so that you can see all of your friend data show up.
-* Delete {{friends}} from your html
+<!-- * In the FriendController copy the data from friend-data.json into a scope variable called 'friends' in your FriendController -->
+<!-- * Add a {{friends}} to the html page and refresh so that you can see all of your friend data show up. -->
+<!-- * Delete {{friends}} from your html -->
 
-#### 
+<!-- #### 
 __friendController.js__
 ```
 angular.module("app").controller('FriendController', function($scope){
@@ -76,27 +76,27 @@ angular.module("app").controller('FriendController', function($scope){
             ......
         ]
 })
-```
+``` -->
 
 
 ### Display friend information
 
 #### 
 
-You now have a list of friends on your scope.  Display that list of friend on the screen.  There is some html code already in the index.html to help you get the look right.
+<!-- You now have a list of friends on your scope.  Display that list of friend on the screen.  There is some html code already in the index.html to help you get the look right. -->
 
-Your data contains a url for an image for each person.  Make sure the image shows up as well!
-
-#### 
-
-* Use ng-repeat on the ul to create a new li for each person in the person array
-
-* Use `{{}}` bindings to fill the user's picture and data into the li content.
-When doing this you can walk down objects using dot notation.
-
-* For the images use ng-src not src. 
+<!-- Your data contains a url for an image for each person.  Make sure the image shows up as well! -->
 
 #### 
+
+<!-- * Use ng-repeat on the ul to create a new li for each person in the person array -->
+
+<!-- * Use `{{}}` bindings to fill the user's picture and data into the li content. -->
+<!-- When doing this you can walk down objects using dot notation. -->
+
+<!-- * For the images use ng-src not src.  -->
+
+<!-- #### 
 __index.html__
 ```
 <ul ng-repeat="friend in friends">
@@ -118,21 +118,21 @@ __index.html__
     </div>
     </li>
 </ul>
-```
+``` -->
 
 
 
 ### Add a search filter on the friends
 
 #### 
-A filter that will take a user inputted string and only display models that contain that string.
+<!-- A filter that will take a user inputted string and only display models that contain that string. -->
 
 #### 
-Note that the filter searches all attributes of the model recursively.
-* Use ng-model (on the input) to add an attribute called searchTerm to your FriendController scope to store the value of the search term inputted by the user
-* Add a filter to your ng-repeat attribute to filter on the search term
+<!-- Note that the filter searches all attributes of the model recursively. -->
+<!-- * Use ng-model (on the input) to add an attribute called searchTerm to your FriendController scope to store the value of the search term inputted by the user -->
+<!-- * Add a filter to your ng-repeat attribute to filter on the search term -->
 
-#### 
+<!-- #### 
 __index.html__
 ```
  <input class="form-control" placeholder="Search Anything About Your Friends"
@@ -168,7 +168,7 @@ __index.html__
   
  <ul ng-repeat="friend in friends | filter: friendFilter">
   
-```
+``` -->
 
 ###Step 6: Make the list sortable
 
